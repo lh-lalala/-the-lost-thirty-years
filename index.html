@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>拆书 · 失去的三十年：平成日本经济史</title>
+<meta name="description" content="野口悠纪雄《失去的三十年：平成日本经济史》拆书笔记：三个病根、一条时间轴、四轮无效宽松。">
+<style>
+  :root{
+    --paper:#faf7f2;
+    --paper-2:#fffdf9;
+    --ink:#1f1c19;
+    --ink-2:#3d372f;
+    --muted:#7a7065;
+    --line:#e5ddd2;
+    --accent:#b23a2e;
+    --accent-soft:#fbeee9;
+    --teal:#2c5f5a;
+    --teal-soft:#edf4f2;
+    --gold:#a8761f;
+    --radius:14px;
+    --maxw:760px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth; -webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"PingFang SC","Hiragino Sans GB","Songti SC",-apple-system,BlinkMacSystemFont,"Microsoft YaHei",sans-serif;
+    font-size:17px; line-height:1.9; letter-spacing:.01em;
+    text-rendering:optimizeLegibility;
+  }
+  a{color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(178,58,46,.3)}
+  a:hover{border-bottom-color:var(--accent)}
+
+  /* ---------- hero ---------- */
+  .hero{
+    position:relative; overflow:hidden;
+    padding:88px 24px 64px;
+    background:
+      radial-gradient(900px 380px at 12% -10%, #f3e6d8 0%, transparent 62%),
+      radial-gradient(700px 320px at 92% 0%, #eee9e0 0%, transparent 60%),
+      var(--paper);
+    border-bottom:1px solid var(--line);
+  }
+  .hero-inner{max-width:920px; margin:0 auto; position:relative}
+  .kicker{
+    font-size:12px; letter-spacing:.34em; color:var(--accent);
+    text-transform:uppercase; margin-bottom:22px; font-weight:600;
+  }
+  .hero h1{
+    font-family:"Songti SC","Noto Serif SC",Georgia,serif;
+    font-size:clamp(40px,7.2vw,72px); line-height:1.14; margin:0 0 6px;
+    letter-spacing:.02em; font-weight:700;
+  }
+  .hero .sub{
+    font-family:"Songti SC","Noto Serif SC",Georgia,serif;
+    font-size:clamp(19px,2.6vw,26px); color:var(--muted); margin:0 0 30px; font-weight:400;
+  }
+  .hero .lede{
+    font-size:clamp(17px,2.2vw,20px); color:var(--ink-2); max-width:640px; margin:0 0 34px;
+    padding-left:18px; border-left:3px solid var(--accent);
+  }
+  .hero .lede b{color:var(--ink)}
+  .meta{display:flex; flex-wrap:wrap; gap:8px 10px; font-size:13px; color:var(--muted)}
+  .meta span{
+    background:#fff; border:1px solid var(--line); padding:5px 12px; border-radius:999px;
+  }
+  .seal{
+    position:absolute; top:-6px; right:0; width:74px; height:74px; border:2px solid var(--accent);
+    color:var(--accent); border-radius:10px; display:flex; align-items:center; justify-content:center;
+    font-family:"Songti SC",serif; font-size:26px; line-height:1.1; text-align:center;
+    transform:rotate(4deg); opacity:.9; letter-spacing:0;
+  }
+  @media (max-width:720px){ .seal{display:none} .hero{padding:64px 20px 48px} }
+
+  /* ---------- nav ---------- */
+  nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(250,247,242,.92); backdrop-filter:saturate(180%) blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav .inner{
+    max-width:980px; margin:0 auto; padding:0 20px;
+    display:flex; gap:4px; overflow-x:auto; scrollbar-width:none;
+  }
+  nav .inner::-webkit-scrollbar{display:none}
+  nav a{
+    flex:0 0 auto; font-size:13px; color:var(--muted); padding:13px 10px;
+    border:none; border-bottom:2px solid transparent; white-space:nowrap;
+    transition:color .15s,border-color .15s;
+  }
+  nav a:hover{color:var(--ink)}
+  nav a.active{color:var(--accent); border-bottom-color:var(--accent); font-weight:600}
+
+  /* ---------- layout ---------- */
+  main{max-width:var(--maxw); margin:0 auto; padding:56px 24px 40px}
+  .wide{max-width:980px; margin-left:auto; margin-right:auto}
+  h2{
+    font-family:"Songti SC","Noto Serif SC",Georgia,serif;
+    font-size:clamp(24px,3.4vw,32px); line-height:1.35; margin:74px 0 8px;
+    letter-spacing:.01em; font-weight:700; scroll-margin-top:64px;
+  }
+  h2:first-of-type{margin-top:0}
+  h2 .num{
+    display:inline-block; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:13px; color:var(--accent); background:var(--accent-soft);
+    padding:2px 9px; border-radius:6px; vertical-align:6px; margin-right:12px; letter-spacing:.06em;
+  }
+  h3{
+    font-size:19px; margin:38px 0 10px; font-weight:600; color:var(--ink);
+    padding-left:12px; border-left:3px solid var(--line);
+  }
+  p{margin:14px 0}
+  strong{color:var(--ink); font-weight:600}
+  hr{border:none; border-top:1px solid var(--line); margin:56px 0}
+  ul,ol{padding-left:1.35em; margin:14px 0}
+  li{margin:8px 0}
+  li::marker{color:var(--muted)}
+
+  /* ---------- components ---------- */
+  .callout{
+    background:var(--paper-2); border:1px solid var(--line); border-left:4px solid var(--accent);
+    border-radius:0 var(--radius) var(--radius) 0; padding:18px 22px; margin:26px 0;
+    font-size:16px; color:var(--ink-2);
+  }
+  .callout.teal{border-left-color:var(--teal); background:var(--teal-soft)}
+  .callout b,.callout strong{color:var(--accent)}
+  .callout.teal b,.callout.teal strong{color:var(--teal)}
+
+  blockquote{
+    margin:26px 0; padding:4px 0 4px 22px; border-left:3px solid var(--gold);
+    font-family:"Songti SC","Noto Serif SC",Georgia,serif;
+    font-size:19px; line-height:1.85; color:var(--ink-2);
+  }
+  blockquote p{margin:4px 0}
+
+  .cards{
+    display:grid; gap:14px; margin:24px 0;
+    grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  }
+  .card{
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+    padding:18px 18px 16px; font-size:15px; line-height:1.75;
+  }
+  .card h3.card-t{margin:0 0 8px; padding:0; border:none; font-size:15px; color:var(--accent); font-weight:600}
+  .card p{margin:0; color:var(--ink-2)}
+  .card .tag{
+    display:inline-block; font-size:11px; letter-spacing:.08em; color:var(--muted);
+    margin-bottom:8px; text-transform:uppercase;
+  }
+
+  .stats{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:2px;
+    background:var(--line); border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden; margin:30px 0;
+  }
+  .stats div{background:#fff; padding:18px 12px; text-align:center}
+  .stats b{
+    display:block; font-family:"Songti SC",serif; font-size:30px; color:var(--accent);
+    line-height:1.1; margin-bottom:4px;
+  }
+  .stats span{font-size:12px; color:var(--muted); letter-spacing:.02em}
+
+  .tablewrap{overflow-x:auto; margin:24px 0; border:1px solid var(--line); border-radius:var(--radius); background:#fff}
+  table{border-collapse:collapse; width:100%; font-size:14.5px; line-height:1.6}
+  th,td{padding:11px 14px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top}
+  th{background:#f6f1e9; font-weight:600; font-size:13px; color:var(--ink-2); white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  td:first-child{white-space:nowrap}
+  tbody tr:hover{background:#fdfbf7}
+  .num-cell{font-variant-numeric:tabular-nums}
+
+  .mermaid{
+    background:#fff; border:1px solid var(--line); border-radius:var(--radius);
+    padding:22px 16px; margin:26px 0; text-align:center; overflow-x:auto;
+  }
+  .mermaid svg{max-width:100%; height:auto}
+  @media (min-width:900px){
+    .mermaid{margin-left:-120px; margin-right:-120px}
+  }
+
+  .note{font-size:13.5px; color:var(--muted); line-height:1.75; margin:18px 0}
+  .note b{color:var(--ink-2)}
+
+  .quote-big{
+    margin:40px 0; padding:32px 28px; background:#fff; border:1px solid var(--line);
+    border-radius:var(--radius); text-align:center;
+    font-family:"Songti SC","Noto Serif SC",Georgia,serif; font-size:clamp(19px,2.6vw,24px);
+    line-height:1.7; color:var(--ink);
+  }
+  .quote-big span{display:block; font-size:13px; color:var(--muted); margin-top:16px; font-family:inherit; letter-spacing:.04em}
+
+  footer{
+    border-top:1px solid var(--line); margin-top:40px; padding:40px 24px 60px;
+    background:var(--paper-2);
+  }
+  footer .inner{max-width:var(--maxw); margin:0 auto; font-size:13.5px; color:var(--muted); line-height:1.9}
+  footer b{color:var(--ink-2)}
+  footer p{margin:8px 0}
+
+  @media (max-width:640px){
+    body{font-size:16px}
+    main{padding:40px 18px 24px}
+    h2{margin-top:56px}
+    .stats b{font-size:25px}
+  }
+  @media print{
+    nav,.seal{display:none}
+    body{background:#fff}
+    h2{page-break-after:avoid}
+    .mermaid,.card,.callout,blockquote{page-break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="seal">平成</div>
+    <div class="kicker">拆书笔记 · 日本经济</div>
+    <h1>失去的三十年</h1>
+    <p class="sub">平成日本经济史 ／ 野口悠纪雄</p>
+    <p class="lede">日本不是跑输了，是<b>没听见发令枪</b>。<br>这本书讲的不是一场经济衰退，而是一个国家在三十年里始终没承认——世界已经换了一场比赛。</p>
+    <div class="meta">
+      <span>（日）野口悠纪雄 著</span>
+      <span>郭超敏 译</span>
+      <span>机械工业出版社 · 2022</span>
+      <span>9 章 + 附录年表</span>
+      <span>阅读约 12 分钟</span>
+    </div>
+  </div>
+</header>
+
+<nav><div class="inner" id="nav"></div></nav>
+
+<main>
+  <article id="content"></article>
+</main>
+
+<footer>
+  <div class="inner">
+    <p><b>关于本页</b>　这是一份读者视角的拆书笔记，按"病根—时间—数据—药方"重组原书结构，<b>不是原文摘录</b>；带引号的句子为原书原文。图表中的数字取自原书表 9-1 至 9-5 与附录年表。</p>
+    <p><b>原书</b>　《失去的三十年：平成日本经济史》，（日）野口悠纪雄 著，郭超敏 译，机械工业出版社 2022 年，ISBN 978-7-111-69815-9。</p>
+    <p><b>版权</b>　文字与图表版权归原作者及出版方所有，本页仅作个人学习与研究之用。</p>
+    <p><b>全文</b>　<a href="https://github.com/lh-lalala/-the-lost-thirty-years">github.com/lh-lalala/-the-lost-thirty-years</a></p>
+  </div>
+</footer>
+
+<script type="text/markdown" id="src">
+## 60 秒版本
+
+> 整本书只回答一个问题：平成三十年，日本为什么一路往下走？
+
+答案可以压成三句话：
+
+1. **泡沫破裂只是第一声咳嗽，不是病。** 1990 年股价见顶回落，真正拖垮日本的是此后被反复拖延的不良债权。
+2. **真正的病根，是"没看见世界已经换了规则"。** 中国工业化、IT 革命、制造业从垂直一体化转向水平分工——世界在这三件事上同时变道，日本没有察觉。
+3. **之后所有的政策，都在治一个不是货币的病。** 零利率、量化宽松、异次元宽松、负利率，四轮下来，增长和通胀都没来。
+
+<div class="callout">
+<strong>一句话结论：</strong>日本不是"努力了但没跟上"，而是"根本没意识到需要跟"。作者的原话是——"日本经济落后于世界并不是因为努力过了但没能跟上时代，而是因为在世界经济发生巨大变化的时候，日本并没有感知到，所以才落后了。"
+</div>
+
+<div class="stats">
+  <div><b>30</b><span>年 · 1989–2019</span></div>
+  <div><b>9</b><span>章 + 附录年表</span></div>
+  <div><b>4</b><span>轮货币宽松</span></div>
+  <div><b>12.1</b><span>万字</span></div>
+</div>
+
+全书的结构其实很朴素：**先把泡沫说清楚，再把世界的变化说清楚，最后说明为什么日本两件事都没接住。** 前九章按时间推进，第九章给出作者认为的出路，附录是一份 166 条的平成大事年表。
+
+## 一张图看懂全书
+
+如果把整本书压成一张因果图，大概是这样——
+
+```mermaid
+flowchart LR
+    A["① 世界换赛道<br/>中国工业化 · IT 革命 · 水平分工"] --> B["② 日本没有察觉<br/>继续垂直一体化 · 出口立国"]
+    B --> C["③ 用汇率和宽松续命<br/>2001 · 2013 · 2016"]
+    C --> D["④ 三十年停滞<br/>低增长 · 低通胀 · 高债务"]
+```
+
+上面这条链有个残酷之处：**每一环都是对上一环的"补救"，而每一次补救都没有碰到病根。** 这也解释了书名——不是失去十年，是失去了三十年。
+
+三个时期，对应书里的三组章节：
+
+<div class="cards">
+  <div class="card">
+    <span class="tag">第一～三章</span>
+    <h3 class="card-t">1990 年代 · 泡沫与崩溃</h3>
+    <p>股价地价崩了，金融机构一个个倒下。国民却普遍以为，泡沫是 1995 年左右才破的。</p>
+  </div>
+  <div class="card">
+    <span class="tag">第四～六章</span>
+    <h3 class="card-t">2000 年代 · 虚假繁荣</h3>
+    <p>靠大规模汇率干预换来"舒适的日元贬值"，出口企业赚翻，直到雷曼事件把这一切打断。</p>
+  </div>
+  <div class="card">
+    <span class="tag">第七～九章</span>
+    <h3 class="card-t">2010 年代 · 宽松无效</h3>
+    <p>民主党、大地震、安倍经济学。钱放出去了，却没变成工资、消费和物价。</p>
+  </div>
+</div>
+
+## 泡沫：一场持续五年的集体错觉
+
+故事的开头极其典型。1989 年末，日经平均股价涨到 **38 915 日元**；1990 年 1 月 3 日，《日本经济新闻》还在预测年末将冲上 4 万点。
+
+> 然而，第二天的新年首个交易日，日本股价就全面下跌。从此，日本股价开始持续下跌。
+
+最扎心的不是下跌本身，而是**没人相信这是转折**。书里反复强调一个细节：大多数日本人认为泡沫经济是 1995 年前后才崩溃的，而实际上 1990 年就已经开始了。**认知滞后了整整五年**，这五年正是处置不良债权的黄金窗口。
+
+```mermaid
+timeline
+    title 泡沫见顶的两年
+    1989 年末 : 日经 38 915 日元
+    1990 年 1 月 : 新年首日全面下跌
+    1990 年 2 月 : 限制房地产融资
+    1990 年 10 月 : 跌破 20 000 点
+```
+
+价格下跌之后，链条才开始真正咬合：
+
+```mermaid
+flowchart LR
+    A["股市房市上涨"] --> B["1990 融资限制"] --> C["资产价格下跌"]
+    C --> D["不良债权暴露"] --> E["金融机构倒闭"]
+```
+
+到 1997 年，倒下的是那些"绝对不会倒"的名字：
+
+```mermaid
+timeline
+    title 1997–1998 金融大崩溃
+    1997 年 11 月 : 三洋证券破产
+    1997 年 11 月 : 山一证券停业
+    1998 年 10 月 : 长银国有化
+    1998 年 12 月 : 日债银国有化
+```
+
+<div class="callout">
+<strong>这里有个容易被忽略的判断：</strong>对 90 年代衰退的主流解释是"复合萧条论"——银行惜贷导致企业没钱，所以经济起不来。作者不同意。他认为问题出在<b>实体经济</b>，金融只是把病情放大了。这条分歧很重要，它决定了后面的药方为什么全是错的。
+</div>
+
+## 背景：那十年，世界到底变了什么
+
+第三章之后，作者把镜头拉远。1990 年代的世界发生了三件大事，日本一件都没接住。
+
+<div class="cards">
+  <div class="card">
+    <span class="tag">变化一</span>
+    <h3 class="card-t">中国加快推进工业化</h3>
+    <p>国有企业改革、新企业大量诞生，全球制造业的供给格局被重写。日本企业第一次遇到"成本差一个数量级"的对手。</p>
+  </div>
+  <div class="card">
+    <span class="tag">变化二</span>
+    <h3 class="card-t">IT 革命进入第二阶段</h3>
+    <p>互联网普及，信息处理成本骤降。工作方式、商业模式、企业组织都跟着变，而日本的组织形态几乎没动。</p>
+  </div>
+  <div class="card">
+    <span class="tag">变化三</span>
+    <h3 class="card-t">垂直一体化 → 水平分工</h3>
+    <p>从"一家公司包办全链条"，转向"全球分工、各做一段"。这是全书最关键的一组对照。</p>
+  </div>
+</div>
+
+```mermaid
+flowchart TB
+    subgraph OLD["旧模式 · 垂直一体化"]
+        direction TB
+        o1["设计"] --> o2["零部件"] --> o3["组装"] --> o4["销售"]
+        o5["全部在自家公司内部完成<br/>靠规模与精益取胜"]
+    end
+    subgraph NEW["新模式 · 水平分工"]
+        direction TB
+        n1["品牌与设计"]
+        n2["零部件 · A 国"]
+        n3["组装 · B 国"]
+        n4["市场 · 全球"]
+        n1 --- n2 --- n3 --- n4
+        n5["每家公司只做自己最强的一段<br/>靠选择与连接取胜"]
+    end
+```
+
+书里用英国的复活做了对照：**让英国重新站起来的不是制造业，而是高端服务业。** 这句话对日本的刺痛在于——日本一直在想办法把工厂搬回国内，方向恰好相反。
+
+<div class="callout teal">
+<strong>红皇后假说：</strong>"世界瞬息万变，要想保住原来的位置，就要不断前行，一刻也不能停下。"作者引用生物学家范·瓦伦的这个比喻来说明：日本停下来的那一刻，就已经在后退了。
+</div>
+
+## 续命：日元贬值与"出口立国"的最后一搏
+
+进入 2000 年代，日本看起来恢复了。日经指数从低位回升，2006 年末回到 **17 226 日元**，出口企业利润激增。作者说，这全是假象。
+
+```mermaid
+flowchart LR
+    subgraph BOOM["看起来恢复了"]
+        direction TB
+        A["汇率干预"] --> B["日元贬值"] --> C["出口利润激增"]
+    end
+    subgraph BUST["一夜归零"]
+        direction TB
+        D["雷曼破产"] --> E["日元急升"] --> F["出口崩塌"]
+    end
+    C --> D
+```
+
+这里有个特别日本的细节：**别人在把生产环节往外放，日本在往回搬。** 2004 年前后，日本本土建起了一批生产电视机的大规模工厂——恰好与世界潮流背道而驰。作者当时在美国待了一年多，从外部看日本，"这个国家的落后显而易见"。
+
+雷曼之后，日本靠两件事缓过劲来：一是中国的大规模经济刺激，二是日本政府对制造业的救助。但代价是**企业对政府的依赖越来越深**，而经济结构一点没改。
+
+## 失效：为什么宽松到负利率还是没起色
+
+这是全书最"技术"、也最容易被误解的部分。安倍经济学的核心是异次元量化宽松：央行大举购买国债，向市场注入基础货币。
+
+问题在于——
+
+```mermaid
+flowchart LR
+    A["央行买国债"] --> B["基础货币↑"] --> C["准备金堆积"] --> D["货币供给不变"]
+    D --> E["工资物价不动"]
+```
+
+钱确实放出去了，但它停在了金融体系的第一个环节。作者的原话很直接：**异次元量化宽松"没能增加货币供给量"。**
+
+后续的追加宽松（2014 年 10 月）和负利率（2016 年 1 月）同样没有效果。负利率甚至带来了副作用：**金融机构的收支被严重挤压**。
+
+<div class="cards">
+  <div class="card">
+    <span class="tag">2013 年 4 月</span>
+    <h3 class="card-t">异次元宽松</h3>
+    <p>规模空前，市场情绪一度高涨。但基础货币的增加没有转化为货币供给。</p>
+  </div>
+  <div class="card">
+    <span class="tag">2014 年 4 月</span>
+    <h3 class="card-t">消费税 5% → 8%</h3>
+    <p>增税前出现"突击消费"，增税后需求迅速回落。整体消费水平与 2013 年相当。</p>
+  </div>
+  <div class="card">
+    <span class="tag">2016 年 1 月</span>
+    <h3 class="card-t">负利率</h3>
+    <p>想刺激贷款，结果严重影响了金融机构的收支，经济并未被激活。</p>
+  </div>
+</div>
+
+<div class="callout">
+<strong>所以作者说：</strong>日本面临的问题并不是"摆脱通货紧缩"。把通缩当成病因，就会一直在货币这条路上找答案；而真正的病在人口、劳动力、社会保障和经济结构上。
+</div>
+
+## 四个被这本书驳倒的说法
+
+拆书最有用的一张表：流行解释 vs 作者的判断。
+
+<div class="tablewrap">
+
+| 流行说法 | 作者的反驳 | 依据 |
+| --- | --- | --- |
+| 复合萧条论：银行惜贷导致衰退 | 原因不在金融领域，而在实体经济 | 企业的问题是没有竞争力，不是借不到钱 |
+| 日元贬值 = 经济复苏 | 2003–2004 年那轮是"虚假繁荣" | 靠干预汇率换来的出口利润，雷曼一来就归零 |
+| 宽松货币能制造通胀 | 异次元宽松根本没增加货币供给量 | 基础货币涨了，货币供给量没动 |
+| 出口立国可以持续 | 模式在雷曼后彻底崩塌 | 外部需求一断，整个增长引擎熄火 |
+
+</div>
+
+这四条其实指向同一件事：**日本一直在用"需求侧"的工具，去修一个"结构侧"的问题。** 就像给一辆变速箱坏了的车猛踩油门。
+
+## 数据：日本的未来长什么样
+
+第九章是全书唯一大量用数据说话的部分。作者挑了人口这一组，因为它几乎决定了一切。
+
+**表 9-1　不同年龄段的人口变化（单位：万人）**
+
+<div class="tablewrap">
+
+| 年份 | 15～64 岁 | 65～69 岁 | 70 岁以上 | 15 岁以上合计 |
+| --- | --- | --- | --- | --- |
+| 2015 | 7 728 | 976 | 2 411 | 11 115 |
+| 2020 | 7 406 | 824 | 2 795 | 11 025 |
+| 2040 | 5 978 | 952 | 2 969 | 9 898 |
+| 2060 | 4 793 | 374 | 3 166 | 8 333 |
+
+</div>
+
+```mermaid
+xychart-beta
+    title "15～64 岁人口（万人）"
+    x-axis ["2015", "2020", "2040", "2060"]
+    y-axis "万人" 4000 --> 8000
+    bar [7728, 7406, 5978, 4793]
+```
+
+**结论很硬：从 2015 到 2040 年，劳动年龄人口将减少 1 750 万人。** 如果各年龄段的劳动参与率不变，劳动力人口将减少 1 300 万人以上。
+
+**表 9-3　未来劳动力人口推算（单位：万人）**
+
+<div class="tablewrap">
+
+| 年份 | 15～64 岁 | 65～69 岁 | 70 岁以上 | 合计 | 与 2015 年相比 | 15 岁以上参与率 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 2015 | 5 878 | 413 | 334 | 6 625 | — | 59.6% |
+| 2020 | 5 633 | 352 | 388 | 6 373 | −252 | 57.8% |
+| 2040 | 4 547 | 388 | 412 | 5 347 | −1 278 | 54.0% |
+| 2060 | 3 645 | 245 | 440 | 4 330 | −2 295 | 52.0% |
+
+</div>
+
+作者还做了一组反事实计算：如果能把 65～69 岁的劳动参与率提高到与 15～64 岁相同的水平，并让 70 岁以上人口有三分之一在工作，2040 年的劳动力可以多出约 **900 万人**。即便如此，仍比 2015 年少 880 万人。
+
+**移民这张牌，日本打得极少。** 2016 年日本接纳的外国流入人口约 43 万，排世界第四；但换成"永久移民"口径，日本占人口比只有 **0.05%**，而澳大利亚是 1.07%，瑞士是 1.67%。
+
+<div class="note">
+<b>关于数据的一点说明：</b>表 9-1 中 2040 年合计印作 9 898，但 5 978 + 952 + 2 969 = 9 899；表 9-2 中 65～69 岁人口印作 979（表 9-1 为 976），且 979 + 2 411 = 3 390 与所印 3 387 不符，42.8% 亦与 413 ÷ 979 = 42.2% 不符。这些是原书印刷本身的出入，本页照录未改，引用时请留意。
+</div>
+
+## 药方：作者认为日本该做什么
+
+第九章的立场非常明确：**先别谈摆脱通缩，先谈这四件事。**
+
+<div class="cards">
+  <div class="card">
+    <span class="tag">课题一</span>
+    <h3 class="card-t">劳动力不足</h3>
+    <p>提高老年人、女性的劳动参与率，并认真讨论接纳外国劳动力——而日本在这条路上走得极慢。</p>
+  </div>
+  <div class="card">
+    <span class="tag">课题二</span>
+    <h3 class="card-t">社会保障支出膨胀</h3>
+    <p>老龄化推高养老金与医疗支出，消费税迟早要涨。作者估算，到 2040 年可能需要提高到 15% 左右，而且之后还要继续。</p>
+  </div>
+  <div class="card">
+    <span class="tag">课题三</span>
+    <h3 class="card-t">世界经济结构变化</h3>
+    <p>面对中国增长与全球分工，日本需要重新选择自己在链条上的位置，而不是把工厂搬回来。</p>
+  </div>
+  <div class="card">
+    <span class="tag">课题四</span>
+    <h3 class="card-t">新兴产业与新技术</h3>
+    <p>人工智能等新技术是机会窗口。抓不住，就再失去十年。</p>
+  </div>
+</div>
+
+<div class="callout">
+<strong>但真正的门槛不是方案，是政治。</strong>作者反复强调一句：要想应对这些问题，日本就要<b>打破既得利益者的藩篱</b>。所有看起来技术性的建议，最后都卡在这一步。
+</div>
+
+## 三句话记住这本书
+
+<div class="quote-big">
+"我们这代人就必须扪心自问：我们完成使命了吗？<br>很遗憾，我们失败了。"
+<span>—— 前言</span>
+</div>
+
+<div class="quote-big">
+"日本经济落后于世界并不是因为努力过了但没能跟上时代，<br>而是因为在世界经济发生巨大变化的时候，日本并没有感知到。"
+<span>—— 前言</span>
+</div>
+
+<div class="quote-big">
+"世界瞬息万变，要想保住原来的位置，就要不断前行，<br>一刻也不能停下。"
+<span>—— 红皇后假说</span>
+</div>
+
+## 怎么读这本书
+
+<div class="cards">
+  <div class="card">
+    <span class="tag">适合谁</span>
+    <h3 class="card-t">三类读者</h3>
+    <p>想搞懂"日本为什么不行了"的普通读者；做宏观、产业、汇率研究的从业者；对"失去的三十年"只有模糊印象、想系统补齐的人。</p>
+  </div>
+  <div class="card">
+    <span class="tag">怎么读</span>
+    <h3 class="card-t">先首尾，再中间</h3>
+    <p>先读前言和第一章（作者的问题意识），再跳到第九章（药方），最后回头读第二至八章。这样中间那些年份与人名才不至于变成流水账。</p>
+  </div>
+  <div class="card">
+    <span class="tag">注意</span>
+    <h3 class="card-t">这是一本"自我检讨"</h3>
+    <p>作者是大藏省出身、平成经济的亲历者。他对同代人的批评很重，也夹带大量个人回忆——这既是它的可信之处，也是它的立场所在。</p>
+  </div>
+</div>
+
+如果你想自己核对，附录那份 166 条的平成大事年表是全书最好用的工具：从 1989 年天皇驾崩、消费税 3%，到 1997 年山一证券自主停业，再到 2016 年负利率与英国脱欧，一条条排下来，那三十年到底发生了什么，一目了然。
+
+<div class="callout teal">
+<strong>读完之后可以问自己一个问题：</strong>如果"没察觉世界变了"是病根，那么今天，什么东西正在发生变化，而我们同样没有察觉？
+</div>
+</script>
+
+<script>
+(function(){
+  var CDN = {
+    marked: [
+      'https://cdn.jsdelivr.net/npm/marked@12/lib/marked.umd.js',
+      'https://unpkg.com/marked@12/lib/marked.umd.js'
+    ],
+    mermaid: [
+      'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js',
+      'https://unpkg.com/mermaid@11/dist/mermaid.min.js'
+    ]
+  };
+
+  function load(urls){
+    return new Promise(function(resolve, reject){
+      var i = 0;
+      (function next(){
+        if (i >= urls.length) return reject(new Error('all failed'));
+        var s = document.createElement('script');
+        s.src = urls[i++];
+        s.onload = function(){ resolve(); };
+        s.onerror = next;
+        document.head.appendChild(s);
+      })();
+    });
+  }
+
+  function slugId(i){ return 'sec-' + (i + 1); }
+
+  function buildNav(){
+    var nav = document.getElementById('nav');
+    var hs = document.querySelectorAll('#content h2');
+    var frag = document.createDocumentFragment();
+    hs.forEach(function(h, i){
+      h.id = slugId(i);
+      var a = document.createElement('a');
+      a.href = '#' + h.id;
+      a.textContent = h.textContent.replace(/^\s*[\dA-Za-z]+\s*·\s*/, '').trim();
+      frag.appendChild(a);
+    });
+    nav.appendChild(frag);
+
+    var links = nav.querySelectorAll('a');
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          links.forEach(function(l){ l.classList.remove('active'); });
+          var idx = Array.prototype.indexOf.call(hs, e.target);
+          if (idx > -1 && links[idx]) links[idx].classList.add('active');
+        }
+      });
+    }, { rootMargin: '-60px 0px -70% 0px', threshold: 0 });
+    hs.forEach(function(h){ io.observe(h); });
+  }
+
+  function normalizeDiagrams(){
+    document.querySelectorAll('#content pre > code.language-mermaid').forEach(function(code){
+      var box = document.createElement('div');
+      box.className = 'mermaid';
+      box.textContent = code.textContent;
+      code.parentElement.replaceWith(box);
+    });
+  }
+
+  function init(){
+    var src = document.getElementById('src').textContent;
+    document.getElementById('content').innerHTML = window.marked.parse(src, { gfm: true, breaks: false });
+    buildNav();
+    normalizeDiagrams();
+
+    if (!window.mermaid) {
+      document.querySelectorAll('.mermaid').forEach(function(m){
+        var p = document.createElement('pre');
+        p.textContent = m.textContent;
+        p.style.textAlign = 'left';
+        m.replaceWith(p);
+      });
+      return;
+    }
+
+    window.mermaid.initialize({
+      startOnLoad: false,
+      theme: 'base',
+      securityLevel: 'strict',
+      fontFamily: '"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif',
+      themeVariables: {
+        fontSize: '15px',
+        primaryColor: '#ffffff',
+        primaryTextColor: '#1f1c19',
+        primaryBorderColor: '#c9beb0',
+        lineColor: '#8a7f72',
+        secondaryColor: '#f3ece2',
+        tertiaryColor: '#faf7f2',
+        clusterBkg: '#fffdf9',
+        clusterBorder: '#e3dcd2',
+        titleColor: '#3d372f',
+        edgeLabelBackground: '#faf7f2'
+      },
+      flowchart: { curve: 'basis', padding: 14, useMaxWidth: true },
+      timeline: { padding: 8, useMaxWidth: true },
+      xyChart: { width: 640, height: 320 }
+    });
+
+    try {
+      window.mermaid.run({ nodes: document.querySelectorAll('.mermaid') });
+    } catch (e) {
+      console.error(e);
+    }
+  }
+
+  load(CDN.marked)
+    .then(function(){ return load(CDN.mermaid); })
+    .catch(function(){ /* mermaid optional */ })
+    .then(init);
+})();
+</script>
+</body>
+</html>
