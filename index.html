@@ -179,6 +179,23 @@
     .mermaid{margin-left:-120px; margin-right:-120px}
   }
 
+  details.src{
+    margin:24px 0 34px; border:1px solid var(--line); border-radius:12px;
+    background:#fffdf9; overflow:hidden;
+  }
+  details.src summary{
+    cursor:pointer; padding:13px 18px; font-size:13.5px; color:var(--muted);
+    letter-spacing:.02em; list-style:none; display:flex; align-items:center; gap:8px;
+  }
+  details.src summary::-webkit-details-marker{display:none}
+  details.src summary::before{content:"\25B8"; color:var(--accent); font-size:11px; transition:transform .15s}
+  details.src[open] summary::before{content:"\25BE"}
+  details.src[open] summary{border-bottom:1px solid var(--line); color:var(--ink-2)}
+  details.src:hover summary{color:var(--ink-2)}
+  details.src blockquote{margin:16px 18px 6px; padding-left:16px; border-left-color:var(--line); font-size:15.5px; line-height:1.9}
+  details.src blockquote p{margin:6px 0}
+  details.src .src-note{margin:10px 18px 0; font-size:13px; color:var(--muted); line-height:1.8}
+  details.src .src-link{margin:12px 18px 16px; font-size:13px}
   .note{font-size:13.5px; color:var(--muted); line-height:1.75; margin:18px 0}
   .note b{color:var(--ink-2)}
 
@@ -270,6 +287,13 @@
 
 全书的结构其实很朴素：**先把泡沫说清楚，再把世界的变化说清楚，最后说明为什么日本两件事都没接住。** 前九章按时间推进，第九章给出作者认为的出路，附录是一份 166 条的平成大事年表。
 
+<details class="src">
+<summary>原书对应段落 · 前言</summary>
+<blockquote><p>那么，我们这代人就必须扪心自问：“我们完成使命了吗？”“前辈打下的基础得到发展了吗？”很遗憾，我们失败了。</p></blockquote>
+<blockquote><p>如果用一句话概括这三十年，那就是日本经济被世界经济的浪潮远远甩在身后。整个平成时代，日本经济的国际地位持续下降。</p></blockquote>
+<p class="src-link"><a href="https://github.com/lh-lalala/-the-lost-thirty-years/blob/main/%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4%EF%BC%88%E5%B9%B3%E6%88%90%E6%97%A5%E6%9C%AC%E7%BB%8F%E6%B5%8E%E5%8F%B2%EF%BC%89.md#前言" target="_blank" rel="noopener">在全文里读这一段 →</a></p>
+</details>
+
 ## 一张图看懂全书
 
 如果把整本书压成一张因果图，大概是这样——
@@ -302,6 +326,14 @@ flowchart LR
     <p>民主党、大地震、安倍经济学。钱放出去了，却没变成工资、消费和物价。</p>
   </div>
 </div>
+
+<details class="src">
+<summary>原书对应段落 · 前言</summary>
+<blockquote><p>从经济层面上分析，平成时代大致可以分为三个时期。</p></blockquote>
+<blockquote><p>第一个时期是20世纪90年代。在这个时期，日本泡沫经济崩溃，日本经济遭受了沉重的打击。一直以来支撑日本经济的金融机构也都纷纷倒闭。</p></blockquote>
+<blockquote><p>第二个时期是从2000年开始到2010年的这十年。在这一时期，日元不断贬值，日本经济也在逐渐恢复。但实际上都是一些虚假现象。</p></blockquote>
+<p class="src-link"><a href="https://github.com/lh-lalala/-the-lost-thirty-years/blob/main/%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4%EF%BC%88%E5%B9%B3%E6%88%90%E6%97%A5%E6%9C%AC%E7%BB%8F%E6%B5%8E%E5%8F%B2%EF%BC%89.md#前言" target="_blank" rel="noopener">在全文里读这一段 →</a></p>
+</details>
 
 ## 泡沫：一场持续五年的集体错觉
 
@@ -342,6 +374,15 @@ timeline
 <div class="callout">
 <strong>这里有个容易被忽略的判断：</strong>对 90 年代衰退的主流解释是"复合萧条论"——银行惜贷导致企业没钱，所以经济起不来。作者不同意。他认为问题出在<b>实体经济</b>，金融只是把病情放大了。这条分歧很重要，它决定了后面的药方为什么全是错的。
 </div>
+
+<details class="src">
+<summary>原书对应段落 · 第一章</summary>
+<blockquote><p>1983年，日经平均股价只有8800日元，到了1987年10月涨到26 600日元，在1989年末达到38 915日元。</p></blockquote>
+<blockquote><p>1990年1月3日的《日本经济新闻》曾预测，“日经平均股价在1990年年末将上冲至40 000点左右”。然而，第二天的新年首个交易日，日本股价就全面下跌。</p></blockquote>
+<blockquote><p>当时，很多日本国民的脑海中根本没有过“糟了，日本经济崩溃了”的想法，他们觉得股价的下跌只是暂时性的调整。</p></blockquote>
+<p class="src-note">书里还提到一个细节：作为泡沫象征的迪斯科舞厅“东京朱莉安娜”正式营业是 1991 年 5 月，此时距股价首次全面下跌已过去一年半。</p>
+<p class="src-link"><a href="https://github.com/lh-lalala/-the-lost-thirty-years/blob/main/%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4%EF%BC%88%E5%B9%B3%E6%88%90%E6%97%A5%E6%9C%AC%E7%BB%8F%E6%B5%8E%E5%8F%B2%EF%BC%89.md#第一章-日本人没有察觉到泡沫经济的崩溃" target="_blank" rel="noopener">在全文里读这一段 →</a></p>
+</details>
 
 ## 背景：那十年，世界到底变了什么
 
@@ -389,6 +430,14 @@ flowchart TB
 <strong>红皇后假说：</strong>"世界瞬息万变，要想保住原来的位置，就要不断前行，一刻也不能停下。"作者引用生物学家范·瓦伦的这个比喻来说明：日本停下来的那一刻，就已经在后退了。
 </div>
 
+<details class="src">
+<summary>原书对应段落 · 第二章</summary>
+<blockquote><p>“水平分工”这一新的商业模式的出现，对制造业的生产方式产生了根本性的影响。在制造业领域，世界范围内都出现了“从垂直一体化走向水平分工”的趋势。</p></blockquote>
+<blockquote><p>英国的“复活”并非依靠制造业，实际上，英国制造业到现在依然很薄弱。</p></blockquote>
+<blockquote><p>事实上，让英国经济复苏的是高端服务业，尤其是金融业。</p></blockquote>
+<p class="src-link"><a href="https://github.com/lh-lalala/-the-lost-thirty-years/blob/main/%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4%EF%BC%88%E5%B9%B3%E6%88%90%E6%97%A5%E6%9C%AC%E7%BB%8F%E6%B5%8E%E5%8F%B2%EF%BC%89.md#第二章-世界经济发生了巨大的变化" target="_blank" rel="noopener">在全文里读这一段 →</a></p>
+</details>
+
 ## 续命：日元贬值与"出口立国"的最后一搏
 
 进入 2000 年代，日本看起来恢复了。日经指数从低位回升，2006 年末回到 **17 226 日元**，出口企业利润激增。作者说，这全是假象。
@@ -409,6 +458,13 @@ flowchart LR
 这里有个特别日本的细节：**别人在把生产环节往外放，日本在往回搬。** 2004 年前后，日本本土建起了一批生产电视机的大规模工厂——恰好与世界潮流背道而驰。作者当时在美国待了一年多，从外部看日本，"这个国家的落后显而易见"。
 
 雷曼之后，日本靠两件事缓过劲来：一是中国的大规模经济刺激，二是日本政府对制造业的救助。但代价是**企业对政府的依赖越来越深**，而经济结构一点没改。
+
+<details class="src">
+<summary>原书对应段落 · 第四章</summary>
+<blockquote><p>仅从2003年1月到3月，日元汇率干预金额就已达到2.3万亿日元，之后逐月上升……到2004年4月，干预金额累计已经达到35.2万亿日元。</p></blockquote>
+<blockquote><p>但是，日元在2003年并没有因此而显著贬值。大规模的汇率干预只是阻止了日元继续升值。</p></blockquote>
+<p class="src-link"><a href="https://github.com/lh-lalala/-the-lost-thirty-years/blob/main/%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4%EF%BC%88%E5%B9%B3%E6%88%90%E6%97%A5%E6%9C%AC%E7%BB%8F%E6%B5%8E%E5%8F%B2%EF%BC%89.md#第四章-21世纪日本经济的虚假繁荣让改革渐行渐远" target="_blank" rel="noopener">在全文里读这一段 →</a></p>
+</details>
 
 ## 失效：为什么宽松到负利率还是没起色
 
@@ -448,6 +504,13 @@ flowchart LR
 <strong>所以作者说：</strong>日本面临的问题并不是"摆脱通货紧缩"。把通缩当成病因，就会一直在货币这条路上找答案；而真正的病在人口、劳动力、社会保障和经济结构上。
 </div>
 
+<details class="src">
+<summary>原书对应段落 · 第八章</summary>
+<blockquote><p>为了应对这种情况，日本央行于2016年1月末引入了负利率政策，想要以此来刺激贷款，然而并没有什么效果，反而严重影响了金融机构的收支情况。</p></blockquote>
+<blockquote><p>所以，宽松货币政策也无法激活日本经济，改革日本的经济结构才是当务之急。</p></blockquote>
+<p class="src-link"><a href="https://github.com/lh-lalala/-the-lost-thirty-years/blob/main/%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4%EF%BC%88%E5%B9%B3%E6%88%90%E6%97%A5%E6%9C%AC%E7%BB%8F%E6%B5%8E%E5%8F%B2%EF%BC%89.md#第八章-安倍经济学和异次元货币宽松政策带来了什么" target="_blank" rel="noopener">在全文里读这一段 →</a></p>
+</details>
+
 ## 四个被这本书驳倒的说法
 
 拆书最有用的一张表：流行解释 vs 作者的判断。
@@ -464,6 +527,14 @@ flowchart LR
 </div>
 
 这四条其实指向同一件事：**日本一直在用"需求侧"的工具，去修一个"结构侧"的问题。** 就像给一辆变速箱坏了的车猛踩油门。
+
+<details class="src">
+<summary>原书对应段落 · 第一章</summary>
+<blockquote><p>但是，银行的惜贷是导致投资减少的主要原因，这种判断在数据上无法印证。</p></blockquote>
+<blockquote><p>并不是因为银行不给贷款，企业才无法进行设备投资的，而是企业没有了投资的欲望，因此就会导致利率下降。也就是说，原因不在于放款方，而在于借贷方。</p></blockquote>
+<p class="src-note">作者用两组数据反驳：1991 年 7 月到 1999 年初，银行贷款余额并没有减少；如果真是惜贷，长期利率理应上升，而它从 1991 年 7 月的 7.7% 一路降到 1995 年的 3% 左右。</p>
+<p class="src-link"><a href="https://github.com/lh-lalala/-the-lost-thirty-years/blob/main/%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4%EF%BC%88%E5%B9%B3%E6%88%90%E6%97%A5%E6%9C%AC%E7%BB%8F%E6%B5%8E%E5%8F%B2%EF%BC%89.md#复合萧条论的错误" target="_blank" rel="noopener">在全文里读这一段 →</a></p>
+</details>
 
 ## 数据：日本的未来长什么样
 
@@ -513,6 +584,12 @@ xychart-beta
 <b>关于数据的一点说明：</b>表 9-1 中 2040 年合计印作 9 898，但 5 978 + 952 + 2 969 = 9 899；表 9-2 中 65～69 岁人口印作 979（表 9-1 为 976），且 979 + 2 411 = 3 390 与所印 3 387 不符，42.8% 亦与 413 ÷ 979 = 42.2% 不符。这些是原书印刷本身的出入，本页照录未改，引用时请留意。
 </div>
 
+<details class="src">
+<summary>原书对应段落 · 第九章</summary>
+<blockquote><p>如表9-1所示，从2015年到2040年，15～64岁的人口将减少1750万人。因此，假设这个年龄段的劳动参与率保持76.1%（见表9-2）不变，那么未来的劳动力人口将减少1300万人以上（见表9-3）。</p></blockquote>
+<p class="src-link"><a href="https://github.com/lh-lalala/-the-lost-thirty-years/blob/main/%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4%EF%BC%88%E5%B9%B3%E6%88%90%E6%97%A5%E6%9C%AC%E7%BB%8F%E6%B5%8E%E5%8F%B2%EF%BC%89.md#必须解决劳动力不足的问题年轻人减少老年人增加" target="_blank" rel="noopener">在全文里读这一段 →</a></p>
+</details>
+
 ## 药方：作者认为日本该做什么
 
 第九章的立场非常明确：**先别谈摆脱通缩，先谈这四件事。**
@@ -543,6 +620,13 @@ xychart-beta
 <div class="callout">
 <strong>但真正的门槛不是方案，是政治。</strong>作者反复强调一句：要想应对这些问题，日本就要<b>打破既得利益者的藩篱</b>。所有看起来技术性的建议，最后都卡在这一步。
 </div>
+
+<details class="src">
+<summary>原书对应段落 · 第九章</summary>
+<blockquote><p>综上所述，今后日本很有可能需要继续提高消费税率至10%以上。假设需要根据养老金领取人数和养老金负担人数的变化进行上调，那么，到2040年，消费税率就需要提高1.5倍，也就提高到15%，而且之后还需要继续上调。</p></blockquote>
+<p class="src-note">这一节的小标题是“社会保障的财源不仅仅是消费税”，作者也提到个人所得税与遗产税、以及提高个人负担比例的可能。</p>
+<p class="src-link"><a href="https://github.com/lh-lalala/-the-lost-thirty-years/blob/main/%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4%EF%BC%88%E5%B9%B3%E6%88%90%E6%97%A5%E6%9C%AC%E7%BB%8F%E6%B5%8E%E5%8F%B2%EF%BC%89.md#如何应对社会保障支出的增加" target="_blank" rel="noopener">在全文里读这一段 →</a></p>
+</details>
 
 ## 三句话记住这本书
 
@@ -586,6 +670,14 @@ xychart-beta
 <div class="callout teal">
 <strong>读完之后可以问自己一个问题：</strong>如果"没察觉世界变了"是病根，那么今天，什么东西正在发生变化，而我们同样没有察觉？
 </div>
+
+<details class="src">
+<summary>原书对应段落 · 前言</summary>
+<blockquote><p>本书的目标读者不仅仅是经济领域人士，同时也想供普通大众读者阅读。因此书中很少使用经济学专业术语。如果文中有必须要用到经济学相关专业术语之处，会特别加以解释说明。</p></blockquote>
+<p class="src-link"><a href="https://github.com/lh-lalala/-the-lost-thirty-years/blob/main/%E5%A4%B1%E5%8E%BB%E7%9A%84%E4%B8%89%E5%8D%81%E5%B9%B4%EF%BC%88%E5%B9%B3%E6%88%90%E6%97%A5%E6%9C%AC%E7%BB%8F%E6%B5%8E%E5%8F%B2%EF%BC%89.md#前言" target="_blank" rel="noopener">在全文里读这一段 →</a></p>
+</details>
+
+
 </script>
 
 <script>
